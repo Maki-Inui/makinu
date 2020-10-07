@@ -517,6 +517,9 @@ footer {
   .style {
     width: 100%;
 }
+  .style img {
+  width: 160px;
+}
 
   .styles {
     width: auto;
