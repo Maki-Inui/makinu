@@ -1,4 +1,6 @@
-/* リセットCSSここから */
+/* ==============================
+    リセットCSS
+============================== */
 
 /*
 html5doctor.com Reset Stylesheet
@@ -103,8 +105,20 @@ input, select {
     vertical-align:middle;
 }
 
-/* リセットCSSここまで */
+/* ==============================
+    フロートの解除
+============================== */
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
 
+/* ==============================
+    全体設計
+============================== */
 
 body {
   margin: 0;
@@ -115,19 +129,440 @@ a {
   text-decoration: none;
 }
 
-
 .wrapper {
-  width: 1170px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
+  height: auto;
+  padding-top: 114px;
 }
 
-.main-image {
+/* ==============================
+    ボタン設定
+============================== */
+
+.btn{
+  padding: 10px 48px;
+  display: inline-block;
+  opacity: 0.8;
+  border: 1px solid black;
+}
+
+.btn:hover {
+  transform: translateY(0.1875em);
+  background: #323333;
+  color: white;
+}
+
+/* ==============================
+    ヘッダー
+============================== */
+header {
+  height: 75px;
+  width: 100%;
+  padding: 20px;
+  position: relative;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  background-color:rgba(255,255,255,0.8);
+} 
+
+.header-container {
+  margin-right: 30px;
+}
+
+.header-left {
+  float: left;
+}
+
+.logo {
+  margin-top: 36px;
+}
+
+.menu-icon {
+  color: white;
+  float: right;
+  font-size: 25px;
+  padding: 21px 0;
+  display: none;
+}
+
+.btn-header-top {
+  float: left;
+  position: absolute;
+  top: 0;
+  right: 30px;
+  padding: 10px;
+}
+
+.btn-header-top a {
+  color: black;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.btn-header-top a:hover {
+  transform: translateY(0.1875em);
+}
+
+.header-navi {
+  float: right;
+}
+
+.header-navi ul li {
+  color: black;
+  list-style: none;
+  margin-top: 36px;
+  padding: 10px;
+  font-size: 18px;
+  float: left;
+  font-family: Adobe Garamond Pro;
+}
+
+.header-navi li a {
+  color: black;
+}
+
+/*ホバーしたときに下線矢印も同時に色を変える*/
+.hover-Uline:hover .lineArrow {
+  width: 110%;
+  height: 8px;
+  border-bottom: 1px solid #000;
+  border-right: 1px solid #000;
+   /*傾きを調節*/
+  transform: skew(45deg);
+    /*下線矢印をテキストに合わせてうまい具合にはめる*/
+  margin: 4px 0 0 -2px;
+  cursor: pointer;
+}
+
+/* ==============================
+    メイン
+============================== */
+
+/* top-wrapper */
+.top-wrapper {
   padding-top: 180px;
   padding-bottom: 100px;
-  background-image: url("master/main.jpg");
+  background-image: url(main.jpg);
   color: white;
   background-size: cover;
+  height: 156px;
 }
+
+.top-wrapper .container {
+  background-color: white;
+  opacity: 0.7;
+  width: 340px;
+  text-align: left;
+  padding:10px;
+  margin-left: 10px;
+}
+
+/* top-wrapper h1*/
+.top-wrapper h1{ 
+  opacity: 0.8;
+  font-size: 25px;
+  letter-spacing: 5px;
+  color: #333333;
+}
+
+/* top-wrapper p*/
+.top-wrapper p {
+  padding-top: 2px;
+  opacity: 0.8;
+  color: #333333;
+}
+
+/* ==============================
+    最新記事
+============================== */
+
+.latest_news {
+  padding-bottom: 142px;
+  padding-top: 142px;
+  text-align: center;
+  border: 1px solid black;/*仮*/
+}
+
+.latest_news .container {
+  text-align: center;
+  display: inline-block;
+  }
+
+.latest_news .heading {
+  width: 166px;
+  height: 200px;
+  padding-bottom: 30px;
+  float: left;
+  padding: 10px;
+  display: inline-block;
+}
+
+.heading h2 {
+  font-weight: normal;
+  font-family: Adobe Garamond Pro;
+  font-size: 30px;
+  padding-bottom: 5px;
+  border-bottom: 3px solid black;
+  display: inline-block;
+}
+
+.heading a {
+  padding-top: 10px;
+  color: black;
+  display: inline-block;
+  font-family: Adobe Garamond Pro;
+}
+
+.heading a:hover {
+  transform: translateY(0.1875em);
+}
+
+.stickarrow {
+  width: 40px;
+  height: 8px;
+  border-bottom: 1px solid #000;
+  border-right: 1px solid #000;
+  transform: skew(45deg);
+  display: inline-block;
+}
+
+.heading a:hover .stickarrow {
+  width: 60px;
+  height: 8px;
+  border-bottom: 1px solid #000;
+  border-right: 1px solid #000;
+  transform: skew(45deg);
+  display: inline-block;
+}
+
+.titles {
+  width: 460px;
+  height: 220px;
+  float: left;
+  line-height: 40px;
+  margin-left:10px;
+  display: inline-block;
+}
+
+.titles dl dt {
+  font-size: 14px;
+  color: #c8c8c8;
+  float: left;
+  width: 82px;
+  padding-right: 10px;
+  padding-left: 10px;
+  display: inline-block;
+}
+
+.titles dl dd {
+  font-size: 14px;
+  color: black;
+  float: left;
+  text-align: left;
+  width: 300px;
+  display: inline-block;
+}
+
+.titles dl dd a {
+  color: gray;
+}
+
+.titles dl dd a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+/* ==============================
+    ヘアスタイル
+============================== */
+
+.styles-wrapper {
+  padding-bottom: 142px;
+  background-color: #f7f7f7;
+  padding-top: 142px;
+  text-align: center
+}
+
+.styles-wrapper .heading h2 {
+  margin-bottom: 80px;
+  font-size: 40px;
+}
+
+.styles {
+  height: 202px;
+  width: 850px;
+  margin: 0 auto;
+  padding-top: 20px;
+  border: 1px solid black;/*仮*/
+
+}
+
+.style {
+  float: left;
+  width: 25%;
+}
+
+.style-photo:hover img{
+  transform: scale(1.1);
+  transition-duration: 0.5s;
+}
+
+.details {
+  margin-top: 40px;
+  color: black;
+  display: inline-block;
+  font-family: Adobe Garamond Pro;
+  font-size: 18px;
+}
+ 
+
+/* ==============================
+    サロン情報
+============================== */
+
+.salon-info {
+  padding-bottom: 142px;
+  padding-top: 142px;
+  text-align: center;
+  line-height: 30px;
+}
+
+.salon-info .heading h2{
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.information {
+  text-align: center;
+  display: inline-block;
+}
+
+.item {
+  display: inline-block;
+  width: 90px;
+  height: 200px;
+  float: left;
+  padding: 10px;
+}
+
+.info {
+  display: inline-block;
+  width: 260px;
+  height: 200px;
+  float: left;
+  padding: 10px;
+  text-align: left;
+}
+
+.info span a {
+  color: gray;
+}
+
+.sns {
+  margin-top: 40px;
+}
+
+.fb {
+  margin-right: 40px;
+}
+
+.reservation {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 40px;
+  color: black;
+  display: inline-block;
+  font-family: Adobe Garamond Pro;
+  font-size: 18px;
+}
+
+/* ==============================
+    フッター
+============================== */
+
+footer {
+  height: 30px;
+  font-family: Adobe Garamond Pro;
+  font-size: 14px;
+  text-align: center;
+  background-color: #f7f7f7;
+  padding-top: 10px;
+  color: gray;
+}
+
+
+/* ==============================
+    スマートフォン向けレイアウト
+============================== */
+@media (max-width: 670px ) {
+
+  .btn-header-top {
+    margin: auto;
+  }
+
+  .btn {
+  padding: 10px 24px;
+  }
+
+  .latest_news {
+    padding-top: 70px;
+    padding-bottom: 70px
+    width: auto;
+    text-align: center;
+  }
+
+  .latest_news .heading{
+    height: auto;
+  }
+
+  .titles {
+    margin-left: 30px;
+  }
+
+  .style {
+    width: 100%;
+}
+
+  .styles {
+    width: auto;
+    height: 792px;
+    text-align: center;
+  }
+
+   .header-navi {
+    display: none;
+  }
+
+   .menu-icon {
+    display: block;
+  }
+
+} 
+
+/* ==============================
+    タブレット向けレイアウト
+============================== */
+
+@media (max-width: 1000px ) {
+
+  .btn-header-top {
+    margin: auto;
+  }
+
+  .btn {
+  padding: 10px 24px;
+  }
+
+
+  .style {
+    width: 50%;
+    margin-bottom: 30px;
+}
+
+  .styles {
+    width: auto;
+    height: 416px;
+    text-align: center;
+  }
+
+} 
