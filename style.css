@@ -280,7 +280,6 @@ header {
   padding-bottom: 142px;
   padding-top: 142px;
   text-align: center;
-  border: 1px solid black;/*仮*/
 }
 
 .latest_news .container {
@@ -392,8 +391,7 @@ header {
   height: 202px;
   width: 850px;
   margin: 0 auto;
-  padding-top: 20px;
-  border: 1px solid black;/*仮*/
+  padding-top: 20px
 
 }
 
