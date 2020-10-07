@@ -531,6 +531,10 @@ footer {
    .bars {
     display: block;
   }
+    
+   .information {
+    font-size: 15px;
+  }
 
 } 
 
