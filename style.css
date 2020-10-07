@@ -491,7 +491,7 @@ footer {
 /* ==============================
     スマートフォン向けレイアウト
 ============================== */
-@media (max-width: 670px ) {
+@media (max-width: 600px ) {
 
   .btn-header-top {
     margin: auto;
@@ -540,7 +540,7 @@ footer {
     タブレット向けレイアウト
 ============================== */
 
-@media (max-width: 1000px ) {
+@media (max-width: 1040px ) {
 
   .btn-header-top {
     margin: auto;
