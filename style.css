@@ -533,10 +533,10 @@ footer {
   }
     
    .information p {
-    font-size: 10px;
+    font-size: 9px;
   }
     
-   .item, .info {
+   .item.info {
     width: auto;
 }
 } 
