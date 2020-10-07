@@ -179,8 +179,6 @@ header {
 
 .bars {
   float: left;
-  font-size: 35px;
-  padding: 21px 0;
   display: none;
 }
 
