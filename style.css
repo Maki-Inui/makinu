@@ -123,6 +123,7 @@ input, select {
 body {
   margin: 0;
   font-family: "Hiragino Kaku Gothic ProN";
+  overflow-x: hidden;
 }
 
 a {
@@ -158,7 +159,6 @@ header {
   height: 75px;
   width: 100%;
   padding: 20px;
-  position: relative;
   position: fixed;
   top: 0;
   z-index: 10;
@@ -276,21 +276,20 @@ header {
 .latest_news {
   padding-bottom: 142px;
   padding-top: 142px;
-  text-align: center;
 }
 
 .latest_news .container {
   text-align: center;
-  display: inline-block;
+  display: flex;
+  width: 626px;
+  margin: 0 auto;
   }
 
 .latest_news .heading {
   width: 166px;
   height: 200px;
   padding-bottom: 30px;
-  float: left;
   padding: 10px;
-  display: inline-block;
 }
 
 .heading h2 {
@@ -334,16 +333,15 @@ header {
 .titles {
   width: 460px;
   height: 220px;
-  float: left;
   line-height: 40px;
   margin-left:10px;
   display: inline-block;
+  display: flex;
 }
 
 .titles dl dt {
   font-size: 14px;
   color: #c8c8c8;
-  float: left;
   width: 82px;
   padding-right: 10px;
   padding-left: 10px;
@@ -353,7 +351,6 @@ header {
 .titles dl dd {
   font-size: 14px;
   color: black;
-  float: left;
   text-align: left;
   width: 300px;
   display: inline-block;
@@ -388,12 +385,11 @@ header {
   height: 202px;
   width: 850px;
   margin: 0 auto;
-  padding-top: 20px
-
+  padding-top: 20px;
+  display: flex;
 }
 
 .style {
-  float: left;
   width: 25%;
 }
 
@@ -430,13 +426,15 @@ header {
 .information {
   text-align: center;
   display: inline-block;
+  display: flex;
+  width: 350px;
+  margin: 0 auto;
 }
 
 .item {
   display: inline-block;
   width: 90px;
   height: 200px;
-  float: left;
   padding: 10px;
 }
 
@@ -444,7 +442,6 @@ header {
   display: inline-block;
   width: 260px;
   height: 200px;
-  float: left;
   padding: 10px;
   text-align: left;
 }
@@ -476,27 +473,32 @@ header {
 ============================== */
 
 footer {
-  height: 30px;
   font-family: Adobe Garamond Pro;
   font-size: 14px;
-  text-align: center;
   background-color: #f7f7f7;
   padding-top: 10px;
   color: gray;
+  margin: 0 auto;
+  text-align: center;
+  height: 60px;
 }
 
 
 /* ==============================
     スマートフォン向けレイアウト
 ============================== */
-@media (max-width: 600px ) {
+@media (max-width: 670px ) {
+
+  .wrapper {
+    width: 900px;
+  }
 
   .btn-header-top {
     margin: auto;
   }
 
   .btn {
-  padding: 10px 24px;
+    padding: 10px 24px;
   }
 
   .latest_news {
@@ -504,6 +506,11 @@ footer {
     padding-bottom: 70px
     width: auto;
     text-align: center;
+  }
+
+  .latest_news .container {
+   display: block;
+   width: 460px;
   }
 
   .latest_news .heading{
@@ -515,11 +522,13 @@ footer {
   }
 
   .style {
-    width: 100%;
+    width: 25%;
+    margin-bottom: 30px;
 }
+
   .style img {
-  width: 140px;
-}
+    width: 180px;
+  }
 
   .styles {
     width: 100%;
@@ -534,11 +543,11 @@ footer {
    .bars {
     display: block;
   }
-    
-   .information p {
-    font-size: 9px;
+
+  .information {
+    font-size: 10px;
   }
-    
+
    .item.info {
     width: auto;
 }
@@ -548,7 +557,7 @@ footer {
     タブレット向けレイアウト
 ============================== */
 
-@media (max-width: 1040px ) {
+@media (max-width: 1000px ) {
 
   .btn-header-top {
     margin: auto;
@@ -568,6 +577,8 @@ footer {
     width: auto;
     height: 416px;
     text-align: center;
+    flex-wrap: wrap;
+    padding: 0 70px;
   }
 
 } 
